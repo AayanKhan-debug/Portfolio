@@ -85,3 +85,6 @@ This compiles your code into the `dist/` folder with zero TypeScript errors.
    - **Build Command**: `npm run build`
    - **Output Directory**: `dist`
 5. Click **Deploy**!
+
+---
+*Last Updated: August 2026*
