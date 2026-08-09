@@ -31,13 +31,11 @@ export interface LearningStep {
   description: string;
 }
 
-export type SkillCategory = 'Languages' | 'Frontend' | 'Backend' | 'Database' | 'Tools' | 'Concepts';
+export type SkillCategory = 'Languages' | 'Frontend' | 'Backend' | 'Database' | 'Tools & Technologies';
 
 export interface Skill {
   name: string;
   category: SkillCategory;
-  level: number;
-  badge?: string;
   iconName: string;
 }
 

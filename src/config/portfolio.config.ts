@@ -73,39 +73,31 @@ export const portfolioConfig: PortfolioConfig = {
 
   skills: [
     // Languages
-    { name: "C++", category: "Languages", level: 85, badge: "Proficient", iconName: "FileCode" },
-    { name: "Java", category: "Languages", level: 80, badge: "Proficient", iconName: "Coffee" },
-    { name: "Python", category: "Languages", level: 82, badge: "Proficient", iconName: "Snake" },
-    { name: "JavaScript", category: "Languages", level: 88, badge: "Advanced", iconName: "SquareCode" },
-    { name: "TypeScript", category: "Languages", level: 80, badge: "Proficient", iconName: "FileJson" },
+    { name: "Java", category: "Languages", iconName: "Coffee" },
+    { name: "C++", category: "Languages", iconName: "FileCode" },
+    { name: "Python", category: "Languages", iconName: "Snake" },
+    { name: "JavaScript", category: "Languages", iconName: "SquareCode" },
 
     // Frontend
-    { name: "HTML", category: "Frontend", level: 92, badge: "Advanced", iconName: "Layout" },
-    { name: "CSS", category: "Frontend", level: 88, badge: "Advanced", iconName: "Palette" },
-    { name: "Tailwind CSS", category: "Frontend", level: 88, badge: "Advanced", iconName: "Wind" },
-    { name: "React", category: "Frontend", level: 85, badge: "Proficient", iconName: "Atom" },
-    { name: "Vite", category: "Frontend", level: 85, badge: "Proficient", iconName: "Layers" },
+    { name: "HTML", category: "Frontend", iconName: "Layout" },
+    { name: "CSS", category: "Frontend", iconName: "Palette" },
+    { name: "JavaScript", category: "Frontend", iconName: "SquareCode" },
+    { name: "React", category: "Frontend", iconName: "Atom" },
 
     // Backend
-    { name: "Node.js", category: "Backend", level: 82, badge: "Proficient", iconName: "Server" },
-    { name: "Express.js", category: "Backend", level: 80, badge: "Proficient", iconName: "Route" },
+    { name: "Node.js", category: "Backend", iconName: "Server" },
+    { name: "Express.js", category: "Backend", iconName: "Route" },
+    { name: "Spring Boot", category: "Backend", iconName: "Layers" },
 
     // Database
-    { name: "MongoDB", category: "Database", level: 80, badge: "Proficient", iconName: "Database" },
-    { name: "MySQL", category: "Database", level: 78, badge: "Intermediate", iconName: "Table" },
+    { name: "MySQL", category: "Database", iconName: "Table" },
+    { name: "MongoDB", category: "Database", iconName: "Database" },
 
-    // Tools
-    { name: "Git", category: "Tools", level: 85, badge: "Proficient", iconName: "GitBranch" },
-    { name: "GitHub", category: "Tools", level: 88, badge: "Advanced", iconName: "Github" },
-    { name: "VS Code", category: "Tools", level: 92, badge: "Advanced", iconName: "Terminal" },
-    { name: "Postman", category: "Tools", level: 82, badge: "Proficient", iconName: "Send" },
-
-    // Core CS
-    { name: "Data Structures & Algorithms", category: "Concepts", level: 85, badge: "Proficient", iconName: "Binary" },
-    { name: "Object-Oriented Programming", category: "Concepts", level: 85, badge: "Proficient", iconName: "Boxes" },
-    { name: "Database Management Systems", category: "Concepts", level: 80, badge: "Proficient", iconName: "DatabaseBackup" },
-    { name: "Operating Systems", category: "Concepts", level: 78, badge: "Intermediate", iconName: "HardDrive" },
-    { name: "Computer Networks", category: "Concepts", level: 78, badge: "Intermediate", iconName: "Globe" }
+    // Tools & Technologies
+    { name: "Git", category: "Tools & Technologies", iconName: "GitBranch" },
+    { name: "GitHub", category: "Tools & Technologies", iconName: "Github" },
+    { name: "REST APIs", category: "Tools & Technologies", iconName: "Network" },
+    { name: "Docker", category: "Tools & Technologies", iconName: "Box" }
   ],
 
   projects: [
