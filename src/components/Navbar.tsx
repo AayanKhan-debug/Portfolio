@@ -120,7 +120,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
           {/* Resume Download Pill */}
           <a
             href={portfolioConfig.personal.resumeUrl}
-            download="RESUME.pdf"
+            download="Aayan-Khan-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 border border-slate-700/70 transition-all duration-200 hover:border-brand-purple/50 shadow-md"
@@ -181,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
               <div className="pt-3 mt-1 border-t border-slate-800 flex justify-between items-center">
                 <a
                   href={portfolioConfig.personal.resumeUrl}
-                  download="RESUME.pdf"
+                  download="Aayan-Khan-Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl bg-brand-purple text-white shadow-glow-purple"

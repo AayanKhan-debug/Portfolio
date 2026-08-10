@@ -81,7 +81,7 @@ export const HeroSection: React.FC = () => {
 
               <a
                 href={resumeUrl}
-                download="RESUME.pdf"
+                download="Aayan-Khan-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/80 border border-slate-700/80 hover:border-brand-cyan text-slate-200 font-semibold text-sm backdrop-blur-md hover:bg-slate-800 transition-all duration-200"
