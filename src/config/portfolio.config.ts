@@ -17,7 +17,7 @@ export const portfolioConfig: PortfolioConfig = {
     location: "Bengaluru, Karnataka, India",
     email: "khan01aayan@gmail.com",
     availability: "Open to Software Engineering Internships and Full-Time Opportunities",
-    resumeUrl: "#", // Replace with your resume link
+    resumeUrl: "/resume.pdf",
     socials: {
       github: "https://github.com/AayanKhan-debug",
       linkedin: "https://www.linkedin.com/in/aayankhan18/",
