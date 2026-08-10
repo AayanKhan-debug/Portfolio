@@ -49,7 +49,7 @@ export const AchievementsSection: React.FC = () => {
               </div>
               <div>
                 <span className="text-xs font-mono uppercase text-amber-400 font-bold">LeetCode Problem Solving</span>
-                <h3 className="text-2xl font-extrabold text-white font-mono">160+ Solved</h3>
+                <h3 className="text-2xl font-extrabold text-white font-mono">300+ Solved</h3>
                 <p className="text-xs text-slate-400 mt-1">Data Structures & Algorithmic Foundations</p>
               </div>
             </div>
