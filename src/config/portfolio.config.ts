@@ -198,8 +198,8 @@ export const portfolioConfig: PortfolioConfig = {
   ],
 
   emailJS: {
-    serviceId: "service_portfolio",
-    templateId: "template_portfolio",
-    publicKey: "user_public_key"
-  }
+  serviceId: "service_x2snheg",
+  templateId: "template_7swxeif",
+  publicKey: "-9J7on6i_VUvY1F_f"
+}
 };
