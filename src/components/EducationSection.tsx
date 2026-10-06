@@ -25,7 +25,7 @@ export const EducationSection: React.FC = () => {
         {/* Education Timeline Card */}
         <div className="max-w-3xl mx-auto">
           {education.map((edu, idx) => (
-            <motion.div
+            <motion.article
               key={edu.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export const EducationSection: React.FC = () => {
                 </div>
               </div>
 
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 

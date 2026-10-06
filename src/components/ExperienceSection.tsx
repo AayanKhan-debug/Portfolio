@@ -48,7 +48,7 @@ export const ExperienceSection: React.FC = () => {
 
                   {/* Experience Content Card */}
                   <div className={`w-full sm:w-[calc(50%-2rem)] pl-12 sm:pl-0 ${isEven ? 'sm:text-left' : 'sm:text-left'}`}>
-                    <div className="glass-card glass-card-hover p-6 sm:p-7 border border-slate-200/80 dark:border-slate-800/80 relative group">
+                    <article className="glass-card glass-card-hover p-6 sm:p-7 border border-slate-200/80 dark:border-slate-800/80 relative group">
                       
                       <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                         <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-brand-purple/10 dark:bg-brand-purple/20 text-brand-purple border border-brand-purple/30 dark:border-brand-purple/40">
@@ -99,7 +99,7 @@ export const ExperienceSection: React.FC = () => {
                         ))}
                       </div>
 
-                    </div>
+                    </article>
                   </div>
                 </motion.div>
               );

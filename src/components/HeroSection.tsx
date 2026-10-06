@@ -52,9 +52,10 @@ export const HeroSection: React.FC = () => {
               <span className="text-xs font-mono font-medium text-slate-700 dark:text-slate-300">{availability}</span>
             </div>
 
-            {/* Main Greeting */}
+            {/* Main Greeting / Semantic H1 */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4 leading-[1.1] transition-colors">
               Hi, I'm <span className="gradient-text">{name}</span>
+              <span className="sr-only"> — Java &amp; Spring Boot Developer</span>
             </h1>
 
             {/* Dynamic Typing Title */}

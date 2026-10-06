@@ -48,7 +48,7 @@ export const AchievementsSection: React.FC = () => {
               </div>
               <div>
                 <span className="text-xs font-mono uppercase text-amber-500 font-bold">LeetCode Problem Solving</span>
-                <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white font-mono transition-colors">300+ Solved</h3>
+                <p className="text-2xl font-extrabold text-slate-900 dark:text-white font-mono transition-colors">300+ Solved</p>
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">Data Structures & Algorithmic Foundations</p>
               </div>
             </div>
@@ -60,7 +60,7 @@ export const AchievementsSection: React.FC = () => {
               </div>
               <div>
                 <span className="text-xs font-mono uppercase text-emerald-600 dark:text-emerald-400 font-bold">Backend Engineering</span>
-                <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white font-mono transition-colors">CampusOS Platform</h3>
+                <p className="text-2xl font-extrabold text-slate-900 dark:text-white font-mono transition-colors">CampusOS Platform</p>
                 <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">Enterprise campus backend built with Spring Boot & MySQL</p>
               </div>
             </div>
@@ -71,7 +71,7 @@ export const AchievementsSection: React.FC = () => {
         {/* Achievements Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {achievements.map((ach, idx) => (
-            <motion.div
+            <motion.article
               key={ach.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -113,7 +113,7 @@ export const AchievementsSection: React.FC = () => {
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               )}
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 

@@ -52,7 +52,7 @@ export const ProjectsSection: React.FC = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {filteredProjects.map((project, idx) => (
-            <motion.div
+            <motion.article
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +64,9 @@ export const ProjectsSection: React.FC = () => {
               <div className="relative aspect-video overflow-hidden bg-slate-100 dark:bg-slate-950">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} — Java Spring Boot project by Aayan Khan`}
+                  width="640"
+                  height="360"
                   loading="lazy"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
@@ -147,7 +149,7 @@ export const ProjectsSection: React.FC = () => {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 
@@ -175,7 +177,9 @@ export const ProjectsSection: React.FC = () => {
               <div className="overflow-y-auto p-6 space-y-6">
                 <img
                   src={activeModalProject.image}
-                  alt={activeModalProject.title}
+                  alt={`${activeModalProject.title} — Java Spring Boot project architecture by Aayan Khan`}
+                  width="640"
+                  height="360"
                   className="w-full aspect-video object-cover rounded-xl border border-slate-200 dark:border-slate-800"
                 />
 

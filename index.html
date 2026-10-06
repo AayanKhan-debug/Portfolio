@@ -2,12 +2,115 @@
 <html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Identity & SEO -->
     <title>Aayan Khan | Java & Spring Boot Developer</title>
-    <meta name="description" content="Portfolio of Aayan Khan, Java & Spring Boot Developer specializing in secure backend systems, REST APIs, relational databases, and modern software engineering." />
-    <meta name="keywords" content="Aayan Khan, Java Developer, Spring Boot, Backend Developer, Spring Security, REST APIs, MySQL, PostgreSQL, JUnit, Docker, Software Engineering" />
+    <meta name="description" content="Portfolio of Aayan Khan, a Java and Spring Boot Developer specializing in backend engineering, scalable REST APIs, relational databases, and secure system architectures." />
+    <meta name="keywords" content="Aayan Khan, Java Developer, Spring Boot Developer, Backend Developer, Spring Security, REST APIs, MySQL, PostgreSQL, JUnit, Docker, NMIT, Software Engineer" />
     <meta name="author" content="Aayan Khan" />
+    <link rel="canonical" href="https://aayankhan-portfolio.vercel.app/" />
+    
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Favicon & Mobile Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#05070f" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Aayan Khan Portfolio" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://aayankhan-portfolio.vercel.app/" />
+    <meta property="og:title" content="Aayan Khan | Java & Spring Boot Developer" />
+    <meta property="og:description" content="Portfolio of Aayan Khan, a Java and Spring Boot Developer specializing in backend engineering, scalable REST APIs, relational databases, and secure system architectures." />
+    <meta property="og:image" content="https://aayankhan-portfolio.vercel.app/images/avatar.jpg" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Aayan Khan — Java & Spring Boot Developer" />
+    <meta property="profile:first_name" content="Aayan" />
+    <meta property="profile:last_name" content="Khan" />
+    <meta property="profile:username" content="AayanKhan-debug" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://aayankhan-portfolio.vercel.app/" />
+    <meta name="twitter:title" content="Aayan Khan | Java & Spring Boot Developer" />
+    <meta name="twitter:description" content="Portfolio of Aayan Khan, a Java and Spring Boot Developer specializing in backend engineering, scalable REST APIs, relational databases, and secure system architectures." />
+    <meta name="twitter:image" content="https://aayankhan-portfolio.vercel.app/images/avatar.jpg" />
+    <meta name="twitter:image:alt" content="Aayan Khan — Java & Spring Boot Developer" />
+
+    <!-- Schema.org JSON-LD Structured Data (ProfilePage & Person Entity) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfilePage",
+          "@id": "https://aayankhan-portfolio.vercel.app/#webpage",
+          "url": "https://aayankhan-portfolio.vercel.app/",
+          "name": "Aayan Khan | Java & Spring Boot Developer",
+          "description": "Portfolio of Aayan Khan, a Java and Spring Boot Developer specializing in backend engineering, scalable REST APIs, relational databases, and secure system architectures.",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": "https://aayankhan-portfolio.vercel.app/#website",
+            "url": "https://aayankhan-portfolio.vercel.app/",
+            "name": "Aayan Khan Portfolio"
+          },
+          "mainEntity": {
+            "@id": "https://aayankhan-portfolio.vercel.app/#aayan-khan"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://aayankhan-portfolio.vercel.app/#aayan-khan",
+          "name": "Aayan Khan",
+          "givenName": "Aayan",
+          "familyName": "Khan",
+          "url": "https://aayankhan-portfolio.vercel.app/",
+          "jobTitle": "Java & Spring Boot Developer",
+          "description": "Backend-focused developer building secure, scalable applications with Java, Spring Boot, REST APIs, databases, and modern frontend technologies.",
+          "image": "https://aayankhan-portfolio.vercel.app/images/avatar.jpg",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Nitte Meenakshi Institute of Technology",
+            "alternateName": "NMIT",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bengaluru",
+              "addressRegion": "Karnataka",
+              "addressCountry": "India"
+            }
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bengaluru",
+            "addressRegion": "Karnataka",
+            "addressCountry": "India"
+          },
+          "sameAs": [
+            "https://github.com/AayanKhan-debug",
+            "https://www.linkedin.com/in/aayankhan18/",
+            "https://leetcode.com/u/khancancode/"
+          ],
+          "knowsAbout": [
+            "Java",
+            "Spring Boot",
+            "Spring Security",
+            "REST APIs",
+            "Spring Data JPA",
+            "Hibernate",
+            "MySQL",
+            "PostgreSQL",
+            "JUnit",
+            "Docker",
+            "Data Structures & Algorithms"
+          ]
+        }
+      ]
+    }
+    </script>
     
     <!-- Theme Initializer (Avoids FOUC) -->
     <script>
@@ -32,6 +135,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body class="bg-dark-bg text-slate-100 antialiased font-sans">
+    <!-- Non-JavaScript Fallback for Web Crawlers & Accessibility -->
+    <noscript>
+      <div style="max-width: 800px; margin: 2rem auto; padding: 1.5rem; font-family: system-ui, sans-serif; line-height: 1.6;">
+        <h1>Aayan Khan — Java &amp; Spring Boot Developer</h1>
+        <p>Information Science Engineering Student at Nitte Meenakshi Institute of Technology (NMIT), Bengaluru, India.</p>
+        <p>Specializing in secure, scalable backend architectures, REST APIs, relational databases (MySQL, PostgreSQL), Spring Security, and Data Structures &amp; Algorithms.</p>
+        <h2>Featured Projects</h2>
+        <ul>
+          <li><strong>CampusOS</strong>: Production-oriented campus management platform built with Java, Spring Boot, Spring Security, and MySQL with pessimistic locking.</li>
+          <li><strong>NMIT Confessions</strong>: Moderated anonymous campus confession platform built with Spring Boot, PostgreSQL, and React.</li>
+        </ul>
+        <h2>Public Profiles</h2>
+        <ul>
+          <li>GitHub: <a href="https://github.com/AayanKhan-debug">github.com/AayanKhan-debug</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/aayankhan18/">linkedin.com/in/aayankhan18/</a></li>
+          <li>LeetCode: <a href="https://leetcode.com/u/khancancode/">leetcode.com/u/khancancode/</a></li>
+        </ul>
+      </div>
+    </noscript>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
