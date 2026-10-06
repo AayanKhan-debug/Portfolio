@@ -1,18 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Code2, GitCommit, ExternalLink, Star, Flame, Brain, FolderGit2, Cpu } from 'lucide-react';
+import { Trophy, Code2, FolderGit2, Brain, Cpu, Flame, GitCommit, ExternalLink } from 'lucide-react';
 import { portfolioConfig } from '../config/portfolio.config';
 
 export const AchievementsSection: React.FC = () => {
   const { achievements } = portfolioConfig;
 
-  const getAchievementIcon = (iconName: string) => {
+  const getAchIcon = (iconName: string) => {
     switch (iconName) {
-      case 'Code2': return <Code2 className="w-6 h-6 text-brand-blue" />;
-      case 'FolderGit2': return <FolderGit2 className="w-6 h-6 text-brand-purple" />;
-      case 'Cpu': return <Cpu className="w-6 h-6 text-brand-cyan" />;
-      case 'Brain': return <Brain className="w-6 h-6 text-pink-500" />;
-      default: return <Star className="w-6 h-6 text-brand-cyan" />;
+      case 'Code2': return <Code2 className="w-5 h-5 text-amber-500" />;
+      case 'FolderGit2': return <FolderGit2 className="w-5 h-5 text-brand-blue" />;
+      case 'Brain': return <Brain className="w-5 h-5 text-brand-purple" />;
+      default: return <Cpu className="w-5 h-5 text-brand-cyan" />;
     }
   };
 
@@ -22,47 +21,47 @@ export const AchievementsSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-amber-400 text-xs font-mono font-semibold tracking-wider uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-amber-500 text-xs font-mono font-semibold tracking-wider uppercase mb-3 shadow-xs">
             <Trophy className="w-3.5 h-3.5" />
-            <span>Milestones & Growth</span>
+            <span>Milestones & Recognition</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight transition-colors">
             Key <span className="gradient-text">Achievements</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-amber-400 via-brand-purple to-pink-500 rounded-full mt-4" />
         </div>
 
-        {/* LeetCode & Full-Stack Featured Banner */}
+        {/* LeetCode & Backend Engineering Featured Banner */}
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="glass-card p-6 sm:p-8 border border-slate-800/80 mb-12 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950"
+          className="glass-card p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800/80 mb-12 bg-gradient-to-r from-slate-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 shadow-sm dark:shadow-md"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             
             {/* LeetCode Badge Box */}
-            <div className="flex items-center gap-4 p-5 rounded-2xl bg-slate-900/90 border border-amber-500/30">
+            <div className="flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-amber-500/30 shadow-xs">
               <div className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/30">
-                <Flame className="w-8 h-8 text-amber-400 animate-pulse" />
+                <Flame className="w-8 h-8 text-amber-500 animate-pulse" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase text-amber-400 font-bold">LeetCode Problem Solving</span>
-                <h3 className="text-2xl font-extrabold text-white font-mono">300+ Solved</h3>
-                <p className="text-xs text-slate-400 mt-1">Data Structures & Algorithmic Foundations</p>
+                <span className="text-xs font-mono uppercase text-amber-500 font-bold">LeetCode Problem Solving</span>
+                <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white font-mono transition-colors">300+ Solved</h3>
+                <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">Data Structures & Algorithmic Foundations</p>
               </div>
             </div>
 
             {/* Project Highlight Box */}
-            <div className="flex items-center gap-4 p-5 rounded-2xl bg-slate-900/90 border border-emerald-500/30">
+            <div className="flex items-center gap-4 p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-emerald-500/30 shadow-xs">
               <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
-                <GitCommit className="w-8 h-8 text-emerald-400" />
+                <GitCommit className="w-8 h-8 text-emerald-500" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase text-emerald-400 font-bold">Backend Engineering</span>
-                <h3 className="text-2xl font-extrabold text-white font-mono">CampusOS Platform</h3>
-                <p className="text-xs text-slate-400 mt-1">Enterprise campus backend built with Spring Boot & MySQL</p>
+                <span className="text-xs font-mono uppercase text-emerald-600 dark:text-emerald-400 font-bold">Backend Engineering</span>
+                <h3 className="text-2xl font-extrabold text-slate-900 dark:text-white font-mono transition-colors">CampusOS Platform</h3>
+                <p className="text-xs text-slate-600 dark:text-slate-400 mt-1">Enterprise campus backend built with Spring Boot & MySQL</p>
               </div>
             </div>
 
@@ -78,27 +77,27 @@ export const AchievementsSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-card glass-card-hover p-6 border border-slate-800/80 flex flex-col justify-between group"
+              className="glass-card glass-card-hover p-6 border border-slate-200/80 dark:border-slate-800/80 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 rounded-2xl bg-slate-900 border border-slate-800 group-hover:scale-110 transition-transform">
-                    {getAchievementIcon(ach.iconName)}
+                  <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 group-hover:scale-110 transition-transform">
+                    {getAchIcon(ach.iconName)}
                   </div>
-                  <span className="px-2.5 py-1 rounded-full text-[10px] font-mono font-bold bg-slate-900 border border-slate-800 text-brand-cyan">
+                  <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400">
                     {ach.category}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-bold text-white mb-1 group-hover:text-brand-purple transition-colors">
-                  {ach.title}
-                </h3>
-                
-                <div className="text-xs font-mono font-bold text-amber-400 mb-3">
+                <div className="inline-block px-2.5 py-1 rounded-lg bg-brand-purple/10 dark:bg-brand-purple/20 border border-brand-purple/30 text-brand-purple text-xs font-mono font-bold mb-3">
                   {ach.metric}
                 </div>
 
-                <p className="text-xs text-slate-400 leading-relaxed mb-6">
+                <h3 className="text-base font-bold text-slate-900 dark:text-white mb-2 group-hover:text-brand-cyan transition-colors">
+                  {ach.title}
+                </h3>
+
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                   {ach.description}
                 </p>
               </div>
@@ -106,11 +105,11 @@ export const AchievementsSection: React.FC = () => {
               {ach.link && (
                 <a
                   href={ach.link}
-                  target="_blank"
+                  target={ach.link.startsWith('http') ? '_blank' : '_self'}
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-purple hover:text-purple-300 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-purple hover:underline pt-2 border-t border-slate-200 dark:border-slate-800/80"
                 >
-                  <span>View Details</span>
+                  <span>Explore Milestone</span>
                   <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               )}

@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-40 px-4 sm:px-8 pt-4 pb-2 pointer-events-none">
       {/* Scroll progress bar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-slate-800/40 z-50 pointer-events-none">
+      <div className="fixed top-0 left-0 right-0 h-1 bg-slate-200/50 dark:bg-slate-800/40 z-50 pointer-events-none">
         <div
           className="h-full bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan transition-all duration-150"
           style={{ width: `${scrollProgress}%` }}
@@ -67,19 +67,19 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
       <nav
         className={`max-w-7xl mx-auto rounded-2xl transition-all duration-300 pointer-events-auto px-4 sm:px-6 py-3 flex items-center justify-between ${
           isScrolled
-            ? 'glass-card border border-slate-700/50 shadow-2xl backdrop-blur-2xl bg-dark-bg/80'
+            ? 'glass-card border border-slate-200/80 dark:border-slate-700/50 shadow-md dark:shadow-2xl backdrop-blur-2xl'
             : 'bg-transparent border border-transparent'
         }`}
       >
         {/* Brand Logo */}
         <a href="#hero" className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-purple p-0.5 shadow-glow-purple/50 group-hover:scale-105 transition-transform duration-300">
-            <div className="w-full h-full bg-dark-bg rounded-[10px] flex items-center justify-center">
-              <Code2 className="w-5 h-5 text-brand-purple group-hover:text-blue-400 transition-colors" />
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue to-brand-purple p-0.5 shadow-glow-purple/40 group-hover:scale-105 transition-transform duration-300">
+            <div className="w-full h-full bg-white dark:bg-dark-bg rounded-[10px] flex items-center justify-center transition-colors">
+              <Code2 className="w-5 h-5 text-brand-purple group-hover:text-blue-500 transition-colors" />
             </div>
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-slate-100 dark:text-slate-100 text-lg leading-tight font-sans tracking-tight">
+            <span className="font-bold text-slate-900 dark:text-slate-100 text-lg leading-tight font-sans tracking-tight transition-colors">
               {portfolioConfig.personal.name}
             </span>
             <span className="text-[10px] text-brand-cyan uppercase tracking-widest font-mono font-medium">
@@ -89,7 +89,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
         </a>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center gap-1 bg-slate-900/50 border border-slate-800/80 rounded-full px-3 py-1.5 backdrop-blur-md">
+        <div className="hidden lg:flex items-center gap-1 bg-white/70 dark:bg-slate-900/50 border border-slate-200/90 dark:border-slate-800/80 rounded-full px-3 py-1.5 backdrop-blur-md shadow-xs">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
@@ -99,13 +99,13 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
                 className={`relative px-3.5 py-1.5 text-xs font-medium rounded-full transition-all duration-200 ${
                   isActive
                     ? 'text-white font-semibold'
-                    : 'text-slate-400 hover:text-slate-200'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="activeNavTab"
-                    className="absolute inset-0 bg-gradient-to-r from-brand-blue/80 to-brand-purple/80 rounded-full z-0 shadow-glow-purple/40"
+                    className="absolute inset-0 bg-gradient-to-r from-brand-blue to-brand-purple rounded-full z-0 shadow-glow-purple/40"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -116,37 +116,56 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
         </div>
 
         {/* Right Action Buttons */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           {/* Resume Download Pill */}
           <a
             href={portfolioConfig.personal.resumeUrl}
             download="Aayan-Khan-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 border border-slate-700/70 transition-all duration-200 hover:border-brand-purple/50 shadow-md"
+            className="hidden sm:flex items-center gap-1.5 text-xs font-semibold px-4 py-2 rounded-xl bg-white dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700/80 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700/70 transition-all duration-200 hover:border-brand-purple/50 shadow-xs hover:shadow-sm"
           >
             <Download className="w-3.5 h-3.5 text-brand-cyan" />
             <span>Resume</span>
           </a>
 
-          {/* Theme Mode Toggle */}
+          {/* Theme Mode Toggle Button */}
           <button
             onClick={() => setDarkMode(prev => !prev)}
-            aria-label="Toggle theme"
-            className="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/70 text-slate-200 transition-all hover:scale-105"
+            aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            title={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+            className="relative p-2.5 rounded-xl bg-white dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700/80 border border-slate-200 dark:border-slate-700/70 text-slate-700 dark:text-slate-200 transition-all duration-200 hover:scale-105 shadow-xs hover:shadow-sm"
           >
-            {darkMode ? (
-              <Sun className="w-4.5 h-4.5 text-amber-400" />
-            ) : (
-              <Moon className="w-4.5 h-4.5 text-indigo-400" />
-            )}
+            <AnimatePresence mode="wait" initial={false}>
+              {darkMode ? (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Sun className="w-4.5 h-4.5 text-amber-400" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Moon className="w-4.5 h-4.5 text-indigo-500" />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </button>
 
           {/* Mobile Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(prev => !prev)}
             aria-label="Toggle mobile menu"
-            className="lg:hidden p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/70 text-slate-200"
+            className="lg:hidden p-2.5 rounded-xl bg-white dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700/70 text-slate-700 dark:text-slate-200 transition-colors"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
@@ -161,7 +180,7 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden mt-3 max-w-7xl mx-auto glass-card p-5 border border-slate-800/90 shadow-2xl backdrop-blur-3xl pointer-events-auto"
+            className="lg:hidden mt-3 max-w-7xl mx-auto glass-card p-5 border border-slate-200/90 dark:border-slate-800/90 shadow-2xl backdrop-blur-3xl pointer-events-auto"
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => (
@@ -172,23 +191,43 @@ export const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
                   className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-colors ${
                     activeSection === link.href.substring(1)
                       ? 'bg-gradient-to-r from-brand-blue to-brand-purple text-white font-semibold'
-                      : 'text-slate-300 hover:bg-slate-800/60'
+                      : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/60'
                   }`}
                 >
                   {link.name}
                 </a>
               ))}
-              <div className="pt-3 mt-1 border-t border-slate-800 flex justify-between items-center">
+              
+              {/* Mobile Drawer Bottom Actions: Resume + Theme Row */}
+              <div className="pt-3 mt-1 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3">
                 <a
                   href={portfolioConfig.personal.resumeUrl}
                   download="Aayan-Khan-Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl bg-brand-purple text-white shadow-glow-purple"
+                  className="flex-1 flex items-center justify-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl bg-brand-purple text-white shadow-glow-purple"
                 >
                   <Download className="w-4 h-4" />
-                  Download Resume
+                  <span>Download Resume</span>
                 </a>
+
+                <button
+                  onClick={() => setDarkMode(prev => !prev)}
+                  className="flex items-center gap-2 text-xs font-semibold px-4 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                  aria-label="Toggle theme"
+                >
+                  {darkMode ? (
+                    <>
+                      <Sun className="w-4 h-4 text-amber-400" />
+                      <span>Light</span>
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="w-4 h-4 text-indigo-500" />
+                      <span>Dark</span>
+                    </>
+                  )}
+                </button>
               </div>
             </div>
           </motion.div>

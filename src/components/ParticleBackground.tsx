@@ -127,7 +127,7 @@ export const ParticleBackground: React.FC = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-60 dark:opacity-60 light:opacity-20"
+      className="fixed inset-0 pointer-events-none z-0 opacity-25 dark:opacity-60 transition-opacity duration-500"
     />
   );
 };

@@ -19,19 +19,53 @@ import type { ToastMessage } from './components/Toast';
 
 export const App: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
-  const [darkMode, setDarkMode] = useState(true);
+
+  // Initialize theme from localStorage or fallback to system preference
+  const [darkMode, setDarkMode] = useState<boolean>(() => {
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved !== null) {
+        return saved === 'dark';
+      }
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    } catch {
+      return true;
+    }
+  });
+
   const [toasts, setToasts] = useState<ToastMessage[]>([]);
 
-  // Dark mode class handler on root html element
+  // Dark mode class handler on root html element and localStorage persistence
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.remove('light');
-    } else {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.add('light');
+    try {
+      if (darkMode) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        localStorage.setItem('theme', 'light');
+      }
+    } catch (e) {
+      console.error('Error persisting theme preference:', e);
     }
   }, [darkMode]);
+
+  // Synchronize with OS system theme if the user hasn't explicitly set a preference in this session
+  useEffect(() => {
+    if (!window.matchMedia) return;
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleSystemThemeChange = (e: MediaQueryListEvent) => {
+      const saved = localStorage.getItem('theme');
+      if (!saved) {
+        setDarkMode(e.matches);
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleSystemThemeChange);
+    return () => mediaQuery.removeEventListener('change', handleSystemThemeChange);
+  }, []);
 
   const addToast = (text: string, type: 'success' | 'info' | 'error' = 'success') => {
     const newToast: ToastMessage = {
@@ -52,7 +86,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-dark-bg text-slate-100 font-sans relative selection:bg-brand-purple/30 selection:text-purple-300">
+    <div className="min-h-screen bg-slate-50 dark:bg-dark-bg text-slate-900 dark:text-slate-100 font-sans relative transition-colors duration-300 selection:bg-brand-purple/30 selection:text-brand-purple dark:selection:text-purple-300">
       <SEOHead />
       
       {/* Loading Splash Screen */}

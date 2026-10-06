@@ -47,25 +47,25 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             {/* Status pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/80 border border-slate-800 backdrop-blur-md mb-6 shadow-md">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-xs font-mono font-medium text-slate-300">{availability}</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 backdrop-blur-md mb-6 shadow-xs">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span className="text-xs font-mono font-medium text-slate-700 dark:text-slate-300">{availability}</span>
             </div>
 
             {/* Main Greeting */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-4 leading-[1.1]">
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4 leading-[1.1] transition-colors">
               Hi, I'm <span className="gradient-text">{name}</span>
             </h1>
 
             {/* Dynamic Typing Title */}
-            <div className="flex items-center text-xl sm:text-3xl font-mono font-semibold text-slate-300 mb-6 h-10">
+            <div className="flex items-center text-xl sm:text-3xl font-mono font-semibold text-slate-700 dark:text-slate-300 mb-6 h-10 transition-colors">
               <span className="text-brand-purple mr-2">&gt;</span>
               <span>{displayedText}</span>
               <span className="w-2 h-7 bg-brand-cyan ml-1 animate-pulse" />
             </div>
 
             {/* Sub-Headline */}
-            <p className="text-base sm:text-lg text-slate-400 mb-8 max-w-2xl leading-relaxed font-sans">
+            <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 mb-8 max-w-2xl leading-relaxed font-sans transition-colors">
               {shortIntro}
             </p>
 
@@ -84,7 +84,7 @@ export const HeroSection: React.FC = () => {
                 download="Aayan-Khan-Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900/80 border border-slate-700/80 hover:border-brand-cyan text-slate-200 font-semibold text-sm backdrop-blur-md hover:bg-slate-800 transition-all duration-200"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white dark:bg-slate-900/80 border border-slate-300 dark:border-slate-700/80 hover:border-brand-cyan dark:hover:border-brand-cyan text-slate-800 dark:text-slate-200 font-semibold text-sm backdrop-blur-md hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 shadow-xs"
               >
                 <Download className="w-4 h-4 text-brand-cyan" />
                 <span>Download Resume</span>
@@ -92,14 +92,14 @@ export const HeroSection: React.FC = () => {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-transparent text-slate-300 hover:text-white font-semibold text-sm hover:underline decoration-brand-purple underline-offset-4 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-transparent text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-semibold text-sm hover:underline decoration-brand-purple underline-offset-4 transition-all"
               >
                 <span>Contact Me</span>
               </a>
             </div>
 
             {/* Social Icons */}
-            <div className="flex items-center gap-4 pt-4 border-t border-slate-800/80 w-full">
+            <div className="flex items-center gap-4 pt-4 border-t border-slate-200 dark:border-slate-800/80 w-full transition-colors">
               <span className="text-xs font-mono uppercase text-slate-500 tracking-wider">Connect:</span>
               <div className="flex items-center gap-3">
                 <a
@@ -107,7 +107,7 @@ export const HeroSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub Profile"
-                  className="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-brand-purple hover:shadow-glow-purple/30 transition-all"
+                  className="p-2.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-brand-purple hover:shadow-glow-purple/30 transition-all shadow-xs"
                 >
                   <GithubIcon className="w-5 h-5" />
                 </a>
@@ -116,7 +116,7 @@ export const HeroSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
-                  className="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-brand-blue hover:shadow-glow-blue/30 transition-all"
+                  className="p-2.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-brand-blue hover:shadow-glow-blue/30 transition-all shadow-xs"
                 >
                   <LinkedinIcon className="w-5 h-5" />
                 </a>
@@ -125,14 +125,14 @@ export const HeroSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LeetCode Profile"
-                  className="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-amber-500 hover:text-amber-400 hover:border-amber-500/50 transition-all"
+                  className="p-2.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-amber-500 hover:text-amber-600 dark:hover:text-amber-400 hover:border-amber-500/50 transition-all shadow-xs"
                 >
                   <LeetCodeIcon className="w-5 h-5" />
                 </a>
                 <a
                   href={socials.email}
                   aria-label="Send Email"
-                  className="p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-300 hover:text-white hover:border-pink-500 hover:shadow-glow-purple/30 transition-all"
+                  className="p-2.5 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-pink-500 hover:shadow-glow-purple/30 transition-all shadow-xs"
                 >
                   <Mail className="w-5 h-5" />
                 </a>
@@ -148,31 +148,31 @@ export const HeroSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             {/* Ambient Background Glow */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan rounded-3xl blur-2xl opacity-25 animate-pulse-slow pointer-events-none" />
+            <div className="absolute -inset-4 bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan rounded-3xl blur-2xl opacity-20 dark:opacity-25 animate-pulse-slow pointer-events-none" />
 
             {/* Glassmorphism Code Terminal */}
-            <div className="relative w-full max-w-lg glass-card overflow-hidden border border-slate-700/80 shadow-2xl font-mono text-xs">
+            <div className="relative w-full max-w-lg glass-card overflow-hidden border border-slate-200/90 dark:border-slate-700/80 shadow-2xl font-mono text-xs">
               {/* Terminal Window Header */}
-              <div className="bg-slate-950/80 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+              <div className="bg-slate-900/90 dark:bg-slate-950/80 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-rose-500/80" />
                   <div className="w-3 h-3 rounded-full bg-amber-500/80" />
                   <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
                 </div>
-                <div className="flex items-center gap-1.5 text-slate-400 text-[11px]">
+                <div className="flex items-center gap-1.5 text-slate-300 text-[11px]">
                   <Terminal className="w-3.5 h-3.5 text-brand-purple" />
-                  <span>developer.ts</span>
+                  <span>Developer.java</span>
                 </div>
-                <div className="flex items-center gap-2 text-slate-500">
+                <div className="flex items-center gap-2 text-slate-400">
                   <Cpu className="w-3.5 h-3.5 text-brand-cyan" />
                 </div>
               </div>
 
               {/* Terminal Code Body */}
-              <div className="p-5 space-y-3 leading-relaxed text-slate-300 bg-slate-950/60">
+              <div className="p-5 space-y-3 leading-relaxed text-slate-300 bg-slate-950/90">
                 <div>
-                  <span className="text-pink-400">interface</span>{' '}
-                  <span className="text-amber-300">Developer</span> &#123;
+                  <span className="text-pink-400">public class</span>{' '}
+                  <span className="text-amber-300">BackendDeveloper</span> &#123;
                 </div>
                 <div className="pl-4">
                   <span className="text-slate-400">name:</span>{' '}

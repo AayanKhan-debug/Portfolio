@@ -9,6 +9,23 @@
     <meta name="keywords" content="Aayan Khan, Java Developer, Spring Boot, Backend Developer, Spring Security, REST APIs, MySQL, PostgreSQL, JUnit, Docker, Software Engineering" />
     <meta name="author" content="Aayan Khan" />
     
+    <!-- Theme Initializer (Avoids FOUC) -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

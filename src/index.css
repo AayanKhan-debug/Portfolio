@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-dark-bg: #05070f;
   --color-dark-card: #0c0f1d;
@@ -28,31 +30,42 @@ body {
   overflow-x: hidden;
 }
 
+html.light body,
 .light body {
   background-color: #f8fafc;
-  color: #1e293b;
+  color: #0f172a;
 }
 
 /* Glassmorphism utilities */
 .glass-card {
-  background-color: rgba(15, 23, 42, 0.6);
+  background-color: rgba(15, 23, 42, 0.65);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(30, 41, 59, 0.8);
   border-radius: 1rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+html.light .glass-card,
 .light .glass-card {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
 }
 
 .glass-card-hover:hover {
   border-color: rgba(139, 92, 246, 0.5);
-  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.25);
+  transform: translateY(-4px);
+}
+
+html.light .glass-card-hover:hover,
+.light .glass-card-hover:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow: 0 14px 28px -5px rgba(124, 58, 237, 0.12);
   transform: translateY(-4px);
 }
 
@@ -63,6 +76,7 @@ body {
   background-image: linear-gradient(to right, #3b82f6, #8b5cf6, #ec4899);
 }
 
+html.light .gradient-text,
 .light .gradient-text {
   background-clip: text;
   -webkit-background-clip: text;
@@ -71,11 +85,21 @@ body {
 }
 
 .shadow-glow-purple {
-  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.5);
+  box-shadow: 0 0 25px -5px rgba(139, 92, 246, 0.4);
+}
+
+html.light .shadow-glow-purple,
+.light .shadow-glow-purple {
+  box-shadow: 0 8px 20px -5px rgba(139, 92, 246, 0.25);
 }
 
 .shadow-glow-blue {
-  box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+html.light .shadow-glow-blue,
+.light .shadow-glow-blue {
+  box-shadow: 0 8px 20px -5px rgba(59, 130, 246, 0.25);
 }
 
 /* Custom Scrollbar */
@@ -87,6 +111,7 @@ body {
   background: #05070f;
 }
 
+html.light ::-webkit-scrollbar-track,
 .light ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
@@ -96,8 +121,25 @@ body {
   border-radius: 4px;
 }
 
+html.light ::-webkit-scrollbar-thumb,
+.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   background: #3b82f6;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Hide cursor on desktop when animated cursor is active */

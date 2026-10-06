@@ -38,7 +38,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-dark-bg text-slate-100 font-mono"
+        className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-slate-50 dark:bg-dark-bg text-slate-900 dark:text-slate-100 font-mono transition-colors"
         initial={{ opacity: 1 }}
         exit={{ opacity: 0, transition: { duration: 0.6 } }}
       >
@@ -49,18 +49,18 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             animate={{ scale: [1, 1.05, 1], rotate: [0, 5, -5, 0] }}
             transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
           >
-            <div className="w-full h-full bg-dark-bg rounded-[14px] flex items-center justify-center">
+            <div className="w-full h-full bg-white dark:bg-dark-bg rounded-[14px] flex items-center justify-center transition-colors">
               <Code2 className="w-10 h-10 text-brand-purple" />
             </div>
           </motion.div>
 
-          <div className="flex items-center gap-2 mb-3 text-slate-300 text-sm tracking-wider uppercase font-semibold">
+          <div className="flex items-center gap-2 mb-3 text-slate-700 dark:text-slate-300 text-sm tracking-wider uppercase font-semibold">
             <Terminal className="w-4 h-4 text-brand-blue animate-pulse" />
             <span>{currentText}</span>
           </div>
 
           {/* Progress bar container */}
-          <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden mb-4 p-0.5 border border-slate-700/50">
+          <div className="w-full h-2 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden mb-4 p-0.5 border border-slate-300 dark:border-slate-700/50">
             <motion.div
               className="h-full bg-gradient-to-r from-brand-blue via-brand-purple to-brand-cyan rounded-full"
               initial={{ width: '0%' }}
@@ -69,7 +69,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
             />
           </div>
 
-          <div className="flex justify-between w-full text-xs text-slate-400">
+          <div className="flex justify-between w-full text-xs text-slate-500 dark:text-slate-400">
             <span className="flex items-center gap-1">
               <Cpu className="w-3.5 h-3.5 text-slate-500" /> V1.0.0
             </span>

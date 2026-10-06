@@ -95,11 +95,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-pink-400 text-xs font-mono font-semibold tracking-wider uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-pink-500 text-xs font-mono font-semibold tracking-wider uppercase mb-3 shadow-xs">
             <MessageSquare className="w-3.5 h-3.5" />
             <span>Get In Touch</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight transition-colors">
             Contact <span className="gradient-text">Me</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-pink-500 via-brand-purple to-brand-blue rounded-full mt-4" />
@@ -115,57 +115,58 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="glass-card p-6 sm:p-8 border border-slate-800/80">
-              <h3 className="text-2xl font-bold text-white mb-3">
-                Let's build something extraordinary together!
+            <div className="glass-card p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800/80">
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 transition-colors">
+                Let's build reliable software systems together!
               </h3>
-              <p className="text-sm text-slate-400 leading-relaxed mb-8">
-                Whether you have a software engineering opportunity, freelance inquiry, open-source project, or simply want to connect, feel free to drop me a message!
+              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-8 transition-colors">
+                Whether you have an engineering internship opportunity, backend development project, open-source discussion, or simply want to connect, feel free to drop me a message!
               </p>
 
               <div className="space-y-4">
                 
                 {/* Email Address & Copy Trigger */}
-                <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center justify-between group">
+                <div className="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 flex items-center justify-between group shadow-2xs">
                   <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-brand-purple/20 text-brand-purple">
+                    <div className="p-2.5 rounded-xl bg-brand-purple/10 dark:bg-brand-purple/20 text-brand-purple">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
                       <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">Direct Email</span>
-                      <a href={`mailto:${email}`} className="text-xs sm:text-sm font-semibold text-white hover:text-brand-cyan transition-colors">
+                      <a href={`mailto:${email}`} className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white hover:text-brand-purple dark:hover:text-brand-cyan transition-colors">
                         {email}
                       </a>
                     </div>
                   </div>
                   <button
                     onClick={handleCopyEmail}
-                    className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors"
+                    className="p-2 rounded-xl bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-transparent transition-colors shadow-2xs"
                     title="Copy Email"
+                    aria-label="Copy email address"
                   >
-                    {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                    {copied ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
                   </button>
                 </div>
 
                 {/* Location */}
-                <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-brand-blue/20 text-brand-blue">
+                <div className="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-2xs">
+                  <div className="p-2.5 rounded-xl bg-brand-blue/10 dark:bg-brand-blue/20 text-brand-blue">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">Location</span>
-                    <span className="text-xs sm:text-sm font-semibold text-white">{location}</span>
+                    <span className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-white">{location}</span>
                   </div>
                 </div>
 
                 {/* Status */}
-                <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400">
+                <div className="p-4 rounded-2xl bg-slate-50/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 flex items-center gap-3 shadow-2xs">
+                  <div className="p-2.5 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-500">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">Availability</span>
-                    <span className="text-xs sm:text-sm font-semibold text-emerald-300">{availability}</span>
+                    <span className="text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-300">{availability}</span>
                   </div>
                 </div>
 
@@ -175,7 +176,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
 
           {/* Right Column: Contact Form */}
           <motion.div
-            className="lg:col-span-7 glass-card p-6 sm:p-8 border border-slate-800/80"
+            className="lg:col-span-7 glass-card p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800/80"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -185,7 +186,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="user_name" className="block text-xs font-mono uppercase text-slate-400 mb-2 font-medium">
+                  <label htmlFor="user_name" className="block text-xs font-mono uppercase text-slate-600 dark:text-slate-400 mb-2 font-medium">
                     Your Name *
                   </label>
                   <input
@@ -195,13 +196,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
                     required
                     value={formState.name}
                     onChange={handleChange}
-                    placeholder="John Doe"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"
+                    placeholder="Aayan"
+                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 text-sm focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all shadow-xs"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="user_email" className="block text-xs font-mono uppercase text-slate-400 mb-2 font-medium">
+                  <label htmlFor="user_email" className="block text-xs font-mono uppercase text-slate-600 dark:text-slate-400 mb-2 font-medium">
                     Your Email *
                   </label>
                   <input
@@ -211,14 +212,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
                     required
                     value={formState.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"
+                    placeholder="your-email@example.com"
+                    className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 text-sm focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all shadow-xs"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="user_subject" className="block text-xs font-mono uppercase text-slate-400 mb-2 font-medium">
+                <label htmlFor="user_subject" className="block text-xs font-mono uppercase text-slate-600 dark:text-slate-400 mb-2 font-medium">
                   Subject
                 </label>
                 <input
@@ -227,13 +228,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
                   name="subject"
                   value={formState.subject}
                   onChange={handleChange}
-                  placeholder="Project Opportunity / Collaboration"
-                  className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all"
+                  placeholder="Software Engineering / Collaboration"
+                  className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 text-sm focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all shadow-xs"
                 />
               </div>
 
               <div>
-                <label htmlFor="user_message" className="block text-xs font-mono uppercase text-slate-400 mb-2 font-medium">
+                <label htmlFor="user_message" className="block text-xs font-mono uppercase text-slate-600 dark:text-slate-400 mb-2 font-medium">
                   Message *
                 </label>
                 <textarea
@@ -244,14 +245,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onShowToast }) =
                   value={formState.message}
                   onChange={handleChange}
                   placeholder="Write your message here..."
-                  className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-300 dark:border-slate-800 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 text-sm focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all resize-none shadow-xs"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 rounded-xl bg-gradient-to-r from-brand-blue via-brand-purple to-pink-600 text-white font-bold text-sm shadow-glow-purple hover:shadow-glow-blue transition-all flex items-center justify-center gap-2 group disabled:opacity-50"
+                className="w-full py-4 rounded-xl bg-gradient-to-r from-brand-blue via-brand-purple to-pink-600 text-white font-bold text-sm shadow-glow-purple hover:shadow-glow-blue transition-all flex items-center justify-center gap-2 group disabled:opacity-50 cursor-pointer"
               >
                 {loading ? (
                   <span>Sending message...</span>

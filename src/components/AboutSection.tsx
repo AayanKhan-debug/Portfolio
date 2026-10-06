@@ -24,11 +24,11 @@ export const AboutSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-brand-purple text-xs font-mono font-semibold tracking-wider uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-brand-purple text-xs font-mono font-semibold tracking-wider uppercase mb-3 shadow-xs">
             <User className="w-3.5 h-3.5" />
             <span>Discover My Background</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight transition-colors">
             About <span className="gradient-text">Me</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-brand-blue to-brand-purple rounded-full mt-4" />
@@ -43,17 +43,17 @@ export const AboutSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="glass-card glass-card-hover p-6 flex flex-col items-center text-center border border-slate-800/80 relative overflow-hidden group"
+              className="glass-card glass-card-hover p-6 flex flex-col items-center text-center border border-slate-200/80 dark:border-slate-800/80 relative overflow-hidden group"
             >
               <div className="absolute -top-10 -right-10 w-24 h-24 bg-brand-purple/10 rounded-full blur-xl group-hover:bg-brand-purple/20 transition-all" />
-              <div className="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 mb-4 group-hover:scale-110 transition-transform">
+              <div className="p-3 rounded-2xl bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 mb-4 group-hover:scale-110 transition-transform">
                 {getStatIcon(stat.iconName)}
               </div>
-              <div className="text-3xl sm:text-4xl font-extrabold text-white font-mono mb-1">
+              <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-mono mb-1 transition-colors">
                 <span>{stat.value}</span>
                 <span className="text-brand-purple">{stat.suffix}</span>
               </div>
-              <span className="text-xs sm:text-sm font-medium text-slate-400">{stat.label}</span>
+              <span className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400">{stat.label}</span>
             </motion.div>
           ))}
         </div>
@@ -63,20 +63,20 @@ export const AboutSection: React.FC = () => {
           
           {/* Left Column: Narrative Tabs */}
           <motion.div
-            className="lg:col-span-7 glass-card p-6 sm:p-8 border border-slate-800/80"
+            className="lg:col-span-7 glass-card p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800/80"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
             {/* Tab Selector buttons */}
-            <div className="flex items-center gap-2 border-b border-slate-800 pb-4 mb-6 overflow-x-auto">
+            <div className="flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-4 mb-6 overflow-x-auto">
               <button
                 onClick={() => setActiveTab('bio')}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                   activeTab === 'bio'
                     ? 'bg-gradient-to-r from-brand-blue to-brand-purple text-white shadow-glow-purple/40'
-                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/50'
                 }`}
               >
                 <User className="w-4 h-4" />
@@ -88,7 +88,7 @@ export const AboutSection: React.FC = () => {
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                   activeTab === 'journey'
                     ? 'bg-gradient-to-r from-brand-blue to-brand-purple text-white shadow-glow-purple/40'
-                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/50'
                 }`}
               >
                 <Compass className="w-4 h-4" />
@@ -100,7 +100,7 @@ export const AboutSection: React.FC = () => {
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                   activeTab === 'objective'
                     ? 'bg-gradient-to-r from-brand-blue to-brand-purple text-white shadow-glow-purple/40'
-                    : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/50'
                 }`}
               >
                 <Target className="w-4 h-4" />
@@ -109,25 +109,25 @@ export const AboutSection: React.FC = () => {
             </div>
 
             {/* Tab Content */}
-            <div className="min-h-[160px] text-slate-300 leading-relaxed font-sans text-sm sm:text-base">
+            <div className="min-h-[160px] text-slate-700 dark:text-slate-300 leading-relaxed font-sans text-sm sm:text-base transition-colors">
               {activeTab === 'bio' && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
                   <p className="mb-4">{fullBio}</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-slate-800/80 text-xs font-mono">
-                    <div className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-slate-200 dark:border-slate-800/80 text-xs font-mono">
+                    <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>Java & Spring Boot Backend</span>
                     </div>
-                    <div className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>RESTful APIs & Security (JWT)</span>
                     </div>
-                    <div className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>Relational Databases & JPA</span>
                     </div>
-                    <div className="flex items-center gap-2 text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                    <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
                       <span>DSA & Concurrency Control</span>
                     </div>
                   </div>
@@ -142,7 +142,7 @@ export const AboutSection: React.FC = () => {
 
               {activeTab === 'objective' && (
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3 }}>
-                  <p className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 border-l-4 border-l-brand-purple italic text-slate-200">
+                  <p className="p-4 rounded-xl bg-slate-100 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 border-l-4 border-l-brand-purple italic text-slate-800 dark:text-slate-200 transition-colors">
                     "{careerObjective}"
                   </p>
                 </motion.div>
@@ -152,30 +152,30 @@ export const AboutSection: React.FC = () => {
 
           {/* Right Column: Animated Learning Roadmap Timeline */}
           <motion.div
-            className="lg:col-span-5 glass-card p-6 sm:p-8 border border-slate-800/80"
+            className="lg:col-span-5 glass-card p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800/80"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2 transition-colors">
               <Compass className="w-5 h-5 text-brand-cyan" />
               <span>Learning Timeline</span>
             </h3>
 
-            <div className="relative pl-6 space-y-6 border-l-2 border-slate-800">
+            <div className="relative pl-6 space-y-6 border-l-2 border-slate-200 dark:border-slate-800 transition-colors">
               {learningJourney.map((step) => (
                 <div key={step.year} className="relative group">
                   {/* Timeline dot */}
-                  <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-900 border-2 border-brand-purple group-hover:bg-brand-cyan transition-colors" />
+                  <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-white dark:bg-slate-900 border-2 border-brand-purple group-hover:bg-brand-cyan transition-colors" />
                   
-                  <div className="inline-block px-2.5 py-0.5 rounded-full bg-brand-purple/20 border border-brand-purple/40 text-brand-purple text-xs font-mono font-bold mb-1">
+                  <div className="inline-block px-2.5 py-0.5 rounded-full bg-brand-purple/10 dark:bg-brand-purple/20 border border-brand-purple/30 dark:border-brand-purple/40 text-brand-purple text-xs font-mono font-bold mb-1">
                     {step.year}
                   </div>
-                  <h4 className="text-sm font-bold text-white group-hover:text-brand-cyan transition-colors">
+                  <h4 className="text-sm font-bold text-slate-900 dark:text-white group-hover:text-brand-cyan transition-colors">
                     {step.title}
                   </h4>
-                  <p className="text-xs text-slate-400 mt-1 leading-relaxed">
+                  <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">
                     {step.description}
                   </p>
                 </div>

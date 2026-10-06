@@ -12,11 +12,11 @@ export const EducationSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-brand-purple text-xs font-mono font-semibold tracking-wider uppercase mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 text-brand-purple text-xs font-mono font-semibold tracking-wider uppercase mb-3 shadow-xs">
             <GraduationCap className="w-3.5 h-3.5" />
             <span>Academic Background</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight transition-colors">
             Education & <span className="gradient-text">Degree</span>
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-brand-blue to-brand-purple rounded-full mt-4" />
@@ -31,25 +31,25 @@ export const EducationSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="glass-card glass-card-hover p-6 sm:p-8 border border-slate-800/80 relative overflow-hidden"
+              className="glass-card glass-card-hover p-6 sm:p-8 border border-slate-200/80 dark:border-slate-800/80 relative overflow-hidden"
             >
               <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 shadow-glow-purple/30">
+                  <div className="p-3.5 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-glow-purple/20">
                     <GraduationCap className="w-7 h-7 text-brand-purple" />
                   </div>
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white mb-1 transition-colors">
                       {edu.degree}
                     </h3>
-                    <p className="text-sm font-semibold text-brand-cyan">
+                    <p className="text-sm font-semibold text-brand-purple dark:text-brand-cyan">
                       {edu.institution}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex flex-col items-end">
-                  <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400 bg-slate-900 px-3 py-1 rounded-full border border-slate-800 mb-1">
+                  <div className="flex items-center gap-1.5 text-xs font-mono text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 px-3 py-1 rounded-full border border-slate-200 dark:border-slate-800 mb-1">
                     <Calendar className="w-3.5 h-3.5 text-brand-purple" />
                     <span>{edu.period}</span>
                   </div>
@@ -60,14 +60,14 @@ export const EducationSection: React.FC = () => {
               </div>
 
               {/* Location & Optional CGPA Pill */}
-              <div className="flex flex-wrap items-center gap-4 mb-6 text-xs text-slate-300 border-b border-slate-800 pb-4">
+              <div className="flex flex-wrap items-center gap-4 mb-6 text-xs text-slate-600 dark:text-slate-300 border-b border-slate-200 dark:border-slate-800 pb-4">
                 <span className="flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5 text-slate-500" />
+                  <MapPin className="w-3.5 h-3.5 text-slate-400 dark:text-slate-500" />
                   {edu.location}
                 </span>
                 {edu.cgpa && (
-                  <span className="flex items-center gap-1 px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 font-mono font-bold">
-                    <Award className="w-3.5 h-3.5 text-emerald-400" />
+                  <span className="flex items-center gap-1 px-3 py-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-300 font-mono font-bold">
+                    <Award className="w-3.5 h-3.5 text-emerald-500" />
                     CGPA: {edu.cgpa}
                   </span>
                 )}
@@ -75,15 +75,15 @@ export const EducationSection: React.FC = () => {
 
               {/* Relevant Coursework */}
               <div>
-                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-2 font-semibold">
-                  <BookOpen className="w-3.5 h-3.5 text-brand-cyan" />
+                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-2 font-semibold">
+                  <BookOpen className="w-3.5 h-3.5 text-brand-purple dark:text-brand-cyan" />
                   <span>Key Coursework & Specializations:</span>
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {edu.coursework.map((course) => (
                     <span
                       key={course}
-                      className="px-3 py-1 rounded-lg text-xs font-mono bg-slate-900 border border-slate-800 text-slate-300"
+                      className="px-3 py-1 rounded-lg text-xs font-mono bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300"
                     >
                       {course}
                     </span>
