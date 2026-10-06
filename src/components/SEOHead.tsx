@@ -79,19 +79,7 @@ export const SEOHead: React.FC = () => {
           "alumniOf": {
             "@type": "CollegeOrUniversity",
             "name": "Nitte Meenakshi Institute of Technology",
-            "alternateName": "NMIT",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Bengaluru",
-              "addressRegion": "Karnataka",
-              "addressCountry": "India"
-            }
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bengaluru",
-            "addressRegion": "Karnataka",
-            "addressCountry": "India"
+            "alternateName": "NMIT"
           },
           "sameAs": [
             socials.github,
