@@ -116,19 +116,19 @@ export const AboutSection: React.FC = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-slate-800/80 text-xs font-mono">
                     <div className="flex items-center gap-2 text-slate-300">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                      <span>Full-Stack Architecture</span>
+                      <span>Java & Spring Boot Backend</span>
                     </div>
                     <div className="flex items-center gap-2 text-slate-300">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                      <span>AI Model API Integration</span>
+                      <span>RESTful APIs & Security (JWT)</span>
                     </div>
                     <div className="flex items-center gap-2 text-slate-300">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                      <span>Agile & Clean Code Standards</span>
+                      <span>Relational Databases & JPA</span>
                     </div>
                     <div className="flex items-center gap-2 text-slate-300">
                       <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                      <span>Competitive Problem Solving</span>
+                      <span>DSA & Concurrency Control</span>
                     </div>
                   </div>
                 </motion.div>

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Code, Layout, Server, Database as DatabaseIcon, Wrench, Sparkles,
-  FileCode, Coffee, LayoutGrid, Palette, Atom, Route, Layers, Table,
-  GitBranch, Network, Box, Terminal, CheckCircle2
+  FileCode, Coffee, LayoutGrid, Palette, Atom, Layers, Table,
+  GitBranch, Network, Box, Terminal, CheckCircle2, Shield, Key, Package, Boxes, Wind
 } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import { portfolioConfig } from '../config/portfolio.config';
@@ -14,30 +14,35 @@ export const SkillsSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<SkillCategory | 'All'>('All');
 
   const categoryMeta: Record<SkillCategory, { label: string; icon: React.ReactNode; color: string }> = {
-    'Languages': {
-      label: 'Languages',
-      icon: <Code className="w-5 h-5 text-brand-purple" />,
-      color: 'from-purple-500/20 to-indigo-500/10 border-purple-500/30'
-    },
-    'Frontend': {
-      label: 'Frontend',
-      icon: <Layout className="w-5 h-5 text-brand-blue" />,
-      color: 'from-blue-500/20 to-cyan-500/10 border-blue-500/30'
-    },
     'Backend': {
       label: 'Backend',
       icon: <Server className="w-5 h-5 text-brand-cyan" />,
       color: 'from-cyan-500/20 to-teal-500/10 border-cyan-500/30'
     },
-    'Database': {
-      label: 'Database',
+    'Databases': {
+      label: 'Databases',
       icon: <DatabaseIcon className="w-5 h-5 text-emerald-400" />,
       color: 'from-emerald-500/20 to-green-500/10 border-emerald-500/30'
     },
-    'Tools & Technologies': {
-      label: 'Tools & Technologies',
+    'Testing': {
+      label: 'Testing',
+      icon: <CheckCircle2 className="w-5 h-5 text-amber-400" />,
+      color: 'from-amber-500/20 to-yellow-500/10 border-amber-500/30'
+    },
+    'Frontend': {
+      label: 'Frontend',
+      icon: <Layout className="w-5 h-5 text-brand-blue" />,
+      color: 'from-blue-500/20 to-indigo-500/10 border-blue-500/30'
+    },
+    'Tools': {
+      label: 'Tools',
       icon: <Wrench className="w-5 h-5 text-pink-400" />,
       color: 'from-pink-500/20 to-purple-500/10 border-pink-500/30'
+    },
+    'Languages': {
+      label: 'Languages',
+      icon: <Code className="w-5 h-5 text-purple-400" />,
+      color: 'from-purple-500/20 to-violet-500/10 border-purple-500/30'
     }
   };
 
@@ -46,31 +51,36 @@ export const SkillsSection: React.FC = () => {
       return <GithubIcon className="w-5 h-5 text-slate-200" />;
     }
     switch (iconName) {
-      case 'FileCode': return <FileCode className="w-5 h-5 text-purple-400" />;
       case 'Coffee': return <Coffee className="w-5 h-5 text-amber-400" />;
-      case 'Snake': return <Terminal className="w-5 h-5 text-emerald-400" />;
-      case 'SquareCode': return <Code className="w-5 h-5 text-amber-300" />;
+      case 'Layers': return <Layers className="w-5 h-5 text-green-400" />;
+      case 'Shield': return <Shield className="w-5 h-5 text-sky-400" />;
+      case 'Database': return <DatabaseIcon className="w-5 h-5 text-emerald-400" />;
+      case 'Boxes': return <Boxes className="w-5 h-5 text-amber-300" />;
+      case 'Network': return <Network className="w-5 h-5 text-brand-purple" />;
+      case 'Key': return <Key className="w-5 h-5 text-yellow-400" />;
+      case 'Package': return <Package className="w-5 h-5 text-orange-400" />;
+      case 'Table': return <Table className="w-5 h-5 text-blue-400" />;
+      case 'CheckCircle2': return <CheckCircle2 className="w-5 h-5 text-emerald-400" />;
+      case 'Sparkles': return <Sparkles className="w-5 h-5 text-purple-400" />;
+      case 'Atom': return <Atom className="w-5 h-5 text-sky-400" />;
+      case 'FileCode': return <FileCode className="w-5 h-5 text-indigo-400" />;
       case 'Layout': return <LayoutGrid className="w-5 h-5 text-rose-400" />;
       case 'Palette': return <Palette className="w-5 h-5 text-cyan-400" />;
-      case 'Atom': return <Atom className="w-5 h-5 text-sky-400" />;
-      case 'Server': return <Server className="w-5 h-5 text-emerald-400" />;
-      case 'Route': return <Route className="w-5 h-5 text-slate-300" />;
-      case 'Layers': return <Layers className="w-5 h-5 text-green-400" />;
-      case 'Table': return <Table className="w-5 h-5 text-blue-400" />;
-      case 'Database': return <DatabaseIcon className="w-5 h-5 text-emerald-400" />;
+      case 'Wind': return <Wind className="w-5 h-5 text-teal-400" />;
       case 'GitBranch': return <GitBranch className="w-5 h-5 text-orange-400" />;
-      case 'Network': return <Network className="w-5 h-5 text-brand-purple" />;
       case 'Box': return <Box className="w-5 h-5 text-sky-400" />;
+      case 'Terminal': return <Terminal className="w-5 h-5 text-emerald-400" />;
       default: return <CheckCircle2 className="w-5 h-5 text-brand-cyan" />;
     }
   };
 
   const categoriesList: SkillCategory[] = [
-    'Languages',
-    'Frontend',
     'Backend',
-    'Database',
-    'Tools & Technologies'
+    'Databases',
+    'Testing',
+    'Frontend',
+    'Tools',
+    'Languages'
   ];
 
   const displayedCategories = selectedCategory === 'All'
@@ -84,7 +94,7 @@ export const SkillsSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-brand-cyan text-xs font-mono font-semibold tracking-wider uppercase mb-3 shadow-md">
-            <Wrench className="w-3.5 h-3.5" />
+            <Server className="w-3.5 h-3.5" />
             <span>Technical Stack</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
@@ -140,9 +150,7 @@ export const SkillsSection: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.08 }}
-                className={`glass-card p-6 border border-slate-800/80 hover:border-slate-700 transition-all duration-300 flex flex-col justify-between group ${
-                  catName === 'Tools & Technologies' && selectedCategory === 'All' ? 'md:col-span-2 lg:col-span-1' : ''
-                }`}
+                className="glass-card p-6 border border-slate-800/80 hover:border-slate-700 transition-all duration-300 flex flex-col justify-between group"
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-3 mb-6 pb-4 border-b border-slate-800/80">

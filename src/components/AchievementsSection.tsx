@@ -60,9 +60,9 @@ export const AchievementsSection: React.FC = () => {
                 <GitCommit className="w-8 h-8 text-emerald-400" />
               </div>
               <div>
-                <span className="text-xs font-mono uppercase text-emerald-400 font-bold">Full-Stack Development</span>
-                <h3 className="text-2xl font-extrabold text-white font-mono">AI Expense Analyzer</h3>
-                <p className="text-xs text-slate-400 mt-1">Full-stack web app built with React & Node.js</p>
+                <span className="text-xs font-mono uppercase text-emerald-400 font-bold">Backend Engineering</span>
+                <h3 className="text-2xl font-extrabold text-white font-mono">CampusOS Platform</h3>
+                <p className="text-xs text-slate-400 mt-1">Enterprise campus backend built with Spring Boot & MySQL</p>
               </div>
             </div>
 

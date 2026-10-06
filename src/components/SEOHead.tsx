@@ -4,7 +4,7 @@ import { portfolioConfig } from '../config/portfolio.config';
 export const SEOHead: React.FC = () => {
   const { name, title, socials } = portfolioConfig.personal;
   const pageTitle = `${name} | ${title}`;
-  const description = `Portfolio of ${name} showcasing Full-Stack Development projects, AI projects, Data Structures & Algorithms, and software engineering skills.`;
+  const description = `Portfolio of ${name}, Java & Spring Boot Developer specializing in secure backend systems, REST APIs, relational databases, and modern software engineering.`;
 
   useEffect(() => {
     // Update title

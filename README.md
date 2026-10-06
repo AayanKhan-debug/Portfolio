@@ -1,6 +1,6 @@
-# Personal Developer & AI Portfolio – Aayan Khan
+# Personal Developer Portfolio – Aayan Khan
 
-A modern, high-performance, dark-themed personal portfolio website built for **Aayan Khan** (Full-Stack Developer & AI Enthusiast). Built with **React 18**, **TypeScript**, **Vite**, **Tailwind CSS**, **Framer Motion**, and **Lucide React**.
+A modern, high-performance, dark-themed personal portfolio website built for **Aayan Khan** (Java & Spring Boot Developer). Built with **React 18**, **TypeScript**, **Vite**, **Tailwind CSS**, **Framer Motion**, and **Lucide React**.
 
 ---
 
@@ -19,7 +19,7 @@ A modern, high-performance, dark-themed personal portfolio website built for **A
 ## 👤 Profile & Authentic Information
 
 - **Name**: Aayan Khan
-- **Title**: Full-Stack Developer | AI Enthusiast
+- **Title**: Java & Spring Boot Developer
 - **Location**: Bengaluru, Karnataka, India
 - **Education**: Nitte Meenakshi Institute of Technology (NMIT) – B.E. Information Science and Engineering (Expected 2028)
 - **Socials**:

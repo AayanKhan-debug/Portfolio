@@ -31,7 +31,7 @@ export interface LearningStep {
   description: string;
 }
 
-export type SkillCategory = 'Languages' | 'Frontend' | 'Backend' | 'Database' | 'Tools & Technologies';
+export type SkillCategory = 'Backend' | 'Databases' | 'Testing' | 'Frontend' | 'Tools' | 'Languages';
 
 export interface Skill {
   name: string;
@@ -44,7 +44,7 @@ export interface Project {
   title: string;
   description: string;
   fullDescription?: string;
-  category: 'AI / ML' | 'Full Stack' | 'Frontend' | 'Web App';
+  category: 'Backend' | 'Full Stack';
   image: string;
   techStack: string[];
   liveDemoUrl: string;

@@ -184,10 +184,10 @@ export const HeroSection: React.FC = () => {
                 </div>
                 <div className="pl-4">
                   <span className="text-slate-400">coreTech:</span> [
-                  <span className="text-cyan-300">"React"</span>,{' '}
-                  <span className="text-cyan-300">"TypeScript"</span>,{' '}
-                  <span className="text-cyan-300">"Node.js"</span>,{' '}
-                  <span className="text-cyan-300">"AI/ML"</span>];
+                  <span className="text-cyan-300">"Java"</span>,{' '}
+                  <span className="text-cyan-300">"Spring Boot"</span>,{' '}
+                  <span className="text-cyan-300">"REST APIs"</span>,{' '}
+                  <span className="text-cyan-300">"MySQL"</span>];
                 </div>
                 <div className="pl-4">
                   <span className="text-slate-400">leetcodeSolves:</span>{' '}
@@ -195,7 +195,7 @@ export const HeroSection: React.FC = () => {
                 </div>
                 <div className="pl-4">
                   <span className="text-slate-400">status:</span>{' '}
-                  <span className="text-purple-400">"Building high-impact apps"</span>;
+                  <span className="text-purple-400">"Building secure, scalable systems"</span>;
                 </div>
                 <div>&#125;</div>
 
@@ -205,7 +205,7 @@ export const HeroSection: React.FC = () => {
                 <div className="flex items-center gap-2 text-emerald-400">
                   <span>&gt;</span>
                   <span className="text-slate-200">Developer.deploy(</span>
-                  <span className="text-amber-300">"FullStack + AI"</span>
+                  <span className="text-amber-300">"Java + Spring Boot"</span>
                   <span className="text-slate-200">);</span>
                 </div>
                 <div className="p-2.5 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-300 text-[11px] flex items-center justify-between">

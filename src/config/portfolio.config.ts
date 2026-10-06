@@ -3,17 +3,17 @@ import type { PortfolioConfig } from '../types/portfolio';
 export const portfolioConfig: PortfolioConfig = {
   personal: {
     name: "Aayan Khan",
-    title: "Full-Stack Developer | AI Enthusiast",
+    title: "Java & Spring Boot Developer",
     roles: [
+      "Java & Spring Boot Developer",
+      "Backend Engineer",
       "Information Science Engineering Student",
-      "Full-Stack Developer",
-      "AI Enthusiast",
       "Problem Solver"
     ],
-    shortIntro: "I'm Aayan Khan, an Information Science Engineering student at Nitte Meenakshi Institute of Technology (NMIT), Bengaluru.",
-    fullBio: "I am passionate about Full-Stack Development, Artificial Intelligence, and Data Structures & Algorithms. I enjoy building modern web applications, solving algorithmic problems, and continuously improving my software engineering skills.",
-    journeyBio: "My current focus is building production-ready full-stack projects, strengthening my DSA skills, and preparing for Software Engineering roles.",
-    careerObjective: "Open to Software Engineering Internships and Full-Time Opportunities where I can build production-ready software solutions and contribute to engineering teams.",
+    shortIntro: "Building secure, scalable backend systems and full-stack applications using Java, Spring Boot, REST APIs, databases, and modern frontend technologies.",
+    fullBio: "I am an Information Science Engineering student at Nitte Meenakshi Institute of Technology (NMIT), Bengaluru, specializing in backend software engineering with Java and Spring Boot. My technical focus centers on architecting resilient RESTful APIs, relational data modeling with MySQL and PostgreSQL, and implementing robust authorization via Spring Security and JWT. While I leverage React for building clean end-to-end applications, backend architecture, concurrency control, and scalable systems are my primary focus.",
+    journeyBio: "My software engineering journey is driven by designing production-oriented backend systems and solving algorithmic problems. Through projects like CampusOS and NMIT Confessions, I have tackled concurrency control using pessimistic locking, waitlist promotion queues, device-token deduplication, and automated testing with JUnit and Mockito, supported by 300+ problems solved on LeetCode.",
+    careerObjective: "Seeking software engineering internships and backend developer roles where I can apply Java, Spring Boot, Spring Security, and database engineering to build high-performance, maintainable services.",
     location: "Bengaluru, Karnataka, India",
     email: "khan01aayan@gmail.com",
     availability: "Open to Software Engineering Internships and Full-Time Opportunities",
@@ -28,8 +28,8 @@ export const portfolioConfig: PortfolioConfig = {
 
   stats: [
     {
-      label: "Projects Completed",
-      value: 1,
+      label: "Featured Backend Projects",
+      value: 2,
       suffix: "+",
       iconName: "FolderGit2"
     },
@@ -40,14 +40,14 @@ export const portfolioConfig: PortfolioConfig = {
       iconName: "Code2"
     },
     {
-      label: "Technologies Learned",
-      value: 10,
+      label: "Core Technologies",
+      value: 12,
       suffix: "+",
       iconName: "Cpu"
     },
     {
-      label: "Currently Learning",
-      value: "Full-Stack & AI",
+      label: "Primary Focus",
+      value: "Java & Spring Boot",
       suffix: "",
       iconName: "GitCommit"
     }
@@ -56,66 +56,96 @@ export const portfolioConfig: PortfolioConfig = {
   learningJourney: [
     {
       year: "2023 - 2024",
-      title: "Programming Foundations & Data Structures",
-      description: "Learned core programming languages including C++, Java, and Python while building strong fundamentals in Data Structures & Algorithms."
+      title: "Core CS & Algorithmic Foundations",
+      description: "Mastered object-oriented programming in Java and C++, building deep fundamentals in Data Structures & Algorithms and computer science theory."
     },
     {
       year: "2024 - 2025",
-      title: "Modern Web Development",
-      description: "Mastered frontend and backend web development using HTML, CSS, Tailwind CSS, JavaScript, React, Vite, Node.js, Express.js, and databases."
+      title: "Backend & Enterprise Java Architecture",
+      description: "Specialized in Spring Boot, Spring Data JPA, Hibernate, relational database design with MySQL and PostgreSQL, and RESTful API architecture."
     },
     {
       year: "2025 - Present",
-      title: "Full-Stack Projects & Advanced Problem Solving",
-      description: "Building production-ready full-stack applications like the AI Expense Analyzer and solving 300+ LeetCode algorithmic challenges."
+      title: "Production Systems, Concurrency & Security",
+      description: "Architecting production-ready platforms including CampusOS and NMIT Confessions with Spring Security, pessimistic concurrency control, and automated testing."
     }
   ],
 
   skills: [
-    // Languages
-    { name: "Java", category: "Languages", iconName: "Coffee" },
-    { name: "C++", category: "Languages", iconName: "FileCode" },
-    { name: "Python", category: "Languages", iconName: "Snake" },
-    { name: "JavaScript", category: "Languages", iconName: "SquareCode" },
+    // Backend
+    { name: "Java", category: "Backend", iconName: "Coffee" },
+    { name: "Spring Boot", category: "Backend", iconName: "Layers" },
+    { name: "Spring Security", category: "Backend", iconName: "Shield" },
+    { name: "Spring Data JPA", category: "Backend", iconName: "Database" },
+    { name: "Hibernate", category: "Backend", iconName: "Boxes" },
+    { name: "REST APIs", category: "Backend", iconName: "Network" },
+    { name: "JWT", category: "Backend", iconName: "Key" },
+    { name: "Maven", category: "Backend", iconName: "Package" },
+
+    // Databases
+    { name: "MySQL", category: "Databases", iconName: "Table" },
+    { name: "PostgreSQL", category: "Databases", iconName: "Database" },
+    { name: "SQL", category: "Databases", iconName: "FileCode" },
+
+    // Testing
+    { name: "JUnit", category: "Testing", iconName: "CheckCircle2" },
+    { name: "Mockito", category: "Testing", iconName: "Sparkles" },
 
     // Frontend
+    { name: "React", category: "Frontend", iconName: "Atom" },
+    { name: "TypeScript", category: "Frontend", iconName: "FileCode" },
     { name: "HTML", category: "Frontend", iconName: "Layout" },
     { name: "CSS", category: "Frontend", iconName: "Palette" },
-    { name: "JavaScript", category: "Frontend", iconName: "SquareCode" },
-    { name: "React", category: "Frontend", iconName: "Atom" },
+    { name: "Tailwind CSS", category: "Frontend", iconName: "Wind" },
 
-    // Backend
-    { name: "Node.js", category: "Backend", iconName: "Server" },
-    { name: "Express.js", category: "Backend", iconName: "Route" },
-    { name: "Spring Boot", category: "Backend", iconName: "Layers" },
+    // Tools
+    { name: "Git", category: "Tools", iconName: "GitBranch" },
+    { name: "GitHub", category: "Tools", iconName: "Github" },
+    { name: "Docker", category: "Tools", iconName: "Box" },
 
-    // Database
-    { name: "MySQL", category: "Database", iconName: "Table" },
-    { name: "MongoDB", category: "Database", iconName: "Database" },
-
-    // Tools & Technologies
-    { name: "Git", category: "Tools & Technologies", iconName: "GitBranch" },
-    { name: "GitHub", category: "Tools & Technologies", iconName: "Github" },
-    { name: "REST APIs", category: "Tools & Technologies", iconName: "Network" },
-    { name: "Docker", category: "Tools & Technologies", iconName: "Box" }
+    // Supporting Languages
+    { name: "C++", category: "Languages", iconName: "FileCode" },
+    { name: "Python", category: "Languages", iconName: "Terminal" }
   ],
 
   projects: [
     {
-      id: "ai-expense-analyzer",
-      title: "AI Expense Analyzer",
-      description: "Intelligent financial tracking & transaction analysis application built with modern full-stack web technologies.",
-      fullDescription: "A full-stack web application designed to track personal expenses, categorize financial transactions, and provide automated insights for budgeting.",
-      category: "AI / ML",
-      image: "/images/project_ai_expense.jpg",
-      techStack: ["React", "TypeScript", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+      id: "campusos",
+      title: "CampusOS",
+      description: "Production-oriented campus management platform engineered with Spring Boot, Spring Security, and MySQL with pessimistic locking for event capacity.",
+      fullDescription: "A comprehensive, production-oriented campus operations and student management platform engineered with Java, Spring Boot, Spring Security, and MySQL. Features role-based authorization, pessimistic locking for event capacity to prevent race conditions, automated waitlist promotion, global exception handling, and automated JUnit test coverage.",
+      category: "Backend",
+      image: "/images/project_campusos.jpg",
+      techStack: ["Java", "Spring Boot", "Spring Security", "JWT", "Spring Data JPA", "Hibernate", "MySQL", "React", "REST APIs", "JUnit", "Maven"],
       liveDemoUrl: "#",
       githubUrl: "https://github.com/AayanKhan-debug",
       features: [
-        "Interactive dashboard for expense categorization and tracking",
-        "Visual financial breakdown with responsive charts",
-        "Clean REST API integration between React frontend and Express backend",
-        "User data management and database persistence with MongoDB"
+        "JWT authentication and fine-grained role-based access control (RBAC)",
+        "Pessimistic locking on event registration to prevent concurrent overbooking",
+        "Automated waitlist queueing and promotion workflow upon cancellations",
+        "Modules for clubs, campus announcements, resources, lost & found, and help desk",
+        "Centralized global exception handling with standardized API response structures",
+        "Automated unit and integration test suite with JUnit and Mockito"
+      ],
+      highlighted: true
+    },
+    {
+      id: "nmit-confessions",
+      title: "NMIT Confessions",
+      description: "Anonymous and moderated campus community confession platform with rate limiting, duplicate detection, and device-token reaction deduplication.",
+      fullDescription: "An anonymous, moderated campus confession platform engineered with Spring Boot, Spring Security, Spring Data JPA, PostgreSQL, and React. Built on an anonymous architecture with zero author identity persistence, secure device-token based reaction and report deduplication, content moderation workflows, and automated backend testing.",
+      category: "Full Stack",
+      image: "/images/project_nmit_confessions.jpg",
+      techStack: ["Java", "Spring Boot", "Spring Security", "Spring Data JPA", "PostgreSQL", "React", "TypeScript", "Tailwind CSS", "Maven", "Docker"],
+      liveDemoUrl: "#",
+      githubUrl: "https://github.com/AayanKhan-debug",
+      features: [
+        "Strictly anonymous confession submission pipeline with zero author identity storage",
+        "Device-token based deduplication for reactions and reports without user authentication",
+        "Content moderation workflow with report thresholds, search, and archiving",
+        "Rate limiting and duplicate content detection to prevent spam",
+        "Containerized backend deployment using Docker",
+        "Automated backend test coverage for core business logic and API contracts"
       ],
       highlighted: true
     }
@@ -124,18 +154,18 @@ export const portfolioConfig: PortfolioConfig = {
   experiences: [
     {
       id: "exp-1",
-      role: "Full-Stack Development & DSA Focus",
+      role: "Java & Spring Boot Backend Engineering",
       company: "Personal & Academic Projects",
       type: "Independent",
       period: "2024 – Present",
       location: "Bengaluru, Karnataka, India",
-      description: "Currently focused on building production-ready full-stack projects, strengthening Data Structures & Algorithms skills, and preparing for Software Engineering opportunities.",
+      description: "Focused on architecting scalable backend systems with Java and Spring Boot, implementing concurrency control, designing relational databases, and practicing algorithmic problem solving.",
       highlights: [
-        "Architected and built full-stack web applications including AI Expense Analyzer",
-        "Solved 300+ algorithmic challenges on LeetCode focusing on data structures and dynamic programming",
-        "Solid foundation in core computer science subjects: Object-Oriented Programming, DBMS, Operating Systems, and Networks"
+        "Architected backend services and platforms including CampusOS and NMIT Confessions using Spring Boot, Spring Security, and Spring Data JPA",
+        "Implemented pessimistic concurrency locking for registration systems and device-token reaction deduplication",
+        "Solved 300+ algorithmic challenges on LeetCode with strong focus on Data Structures, Graphs, and Dynamic Programming"
       ],
-      techStack: ["React", "JavaScript", "TypeScript", "Node.js", "Express.js", "MongoDB", "C++", "Tailwind CSS"]
+      techStack: ["Java", "Spring Boot", "Spring Security", "MySQL", "PostgreSQL", "JUnit", "Docker", "REST APIs"]
     }
   ],
 
@@ -165,41 +195,42 @@ export const portfolioConfig: PortfolioConfig = {
       id: "ach-1",
       title: "Solved 300+ LeetCode problems.",
       metric: "300+ Solved",
-      description: "Consistently practicing algorithmic problem solving on LeetCode.",
+      description: "Consistently practicing algorithmic problem solving and data structures on LeetCode.",
       category: "LeetCode",
       iconName: "Code2",
       link: "https://leetcode.com/u/khancancode/"
     },
     {
       id: "ach-2",
-      title: "Built AI Expense Analyzer.",
-      metric: "Full-Stack Web App",
-      description: "Designed and built an intelligent expense tracking application using React, Node.js, Express, and MongoDB.",
+      title: "Architected CampusOS Platform",
+      metric: "Spring Boot & MySQL",
+      description: "Engineered production-oriented campus system with pessimistic locking, waitlists, and Spring Security.",
       category: "Project",
       iconName: "FolderGit2",
       link: "#projects"
     },
     {
       id: "ach-3",
-      title: "Strong foundation in Data Structures and Algorithms.",
-      metric: "Core CS",
-      description: "Deep understanding of fundamental data structures, graph algorithms, and dynamic programming.",
-      category: "Core CS",
-      iconName: "Brain"
+      title: "Built NMIT Confessions",
+      metric: "Spring Boot & PostgreSQL",
+      description: "Developed anonymous campus platform with rate limiting, moderation workflows, and device-token deduplication.",
+      category: "Project",
+      iconName: "FolderGit2",
+      link: "#projects"
     },
     {
       id: "ach-4",
-      title: "Continuously learning Full-Stack Development.",
-      metric: "Web Technologies",
-      description: "Actively mastering modern frontend frameworks, backend API architectures, and database design.",
-      category: "Skill",
-      iconName: "Cpu"
+      title: "Strong Core CS & Concurrency Foundation",
+      metric: "System Design & DSA",
+      description: "Deep understanding of relational database normalization, transactions, concurrency control, and OOP principles.",
+      category: "Core CS",
+      iconName: "Brain"
     }
   ],
 
   emailJS: {
-  serviceId: "service_x2snheg",
-  templateId: "template_7swxeif",
-  publicKey: "-9J7on6i_VUvY1F_f"
-}
+    serviceId: "service_x2snheg",
+    templateId: "template_7swxeif",
+    publicKey: "-9J7on6i_VUvY1F_f"
+  }
 };
